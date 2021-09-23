@@ -85,7 +85,7 @@ section{
     background: url("images/Background-home2.png") no-repeat center;
     height:100vh;
     color: #ffffff;
-    min-height: 100px;
+    min-height: 900px;
     font-family: 'poppins',sans-serif;
 }
 .home .max-width{
