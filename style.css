@@ -82,7 +82,6 @@ section{
 /*Home styling*/
 .home{
     display: flex;
-    background: url("images/Background-home2.png") no-repeat center;
     height:100vh;
     color: #ffffff;
     min-height: 900px;
