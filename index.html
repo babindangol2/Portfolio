@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>My Portfolio</title>
-    <link rel="shortcut icon" type=""image/jpg" herf="ima`ges/bd.jpg">
+    <link rel="shortcut icon" type="image/jpg" href="images/bd.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -13,296 +14,352 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(window).scroll(function () {
-          // sticky navbar on scroll script
-          if (this.scrollY > 10) {
-            $(".navbar").addClass("sticky");
-          } else {
-            $(".navbar").removeClass("sticky");
-          }
-
-          // scroll-up button show/hide script
-          if (this.scrollY > 500) {
-            $(".scroll-up-btn").addClass("show");
-          } else {
-            $(".scroll-up-btn").removeClass("show");
-          }
-        });
-        $(".menu-btn").click(function () {
-          $(".navbar .menu").toggleClass("active");
-          $(".menu-btn i").toggleClass("active");
-        });
-      });
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
       * {
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
         text-decoration: none;
       }
+
       html {
         scroll-behavior: smooth;
-        transition: all 0.5s ease;
       }
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
       section {
-        padding: 100px 0px;
+        padding: 100px 0;
       }
+
       .max-width {
         max-width: 1440px;
         padding: 0 50px;
         margin: auto;
       }
-      .home,
-      .about,
-      .services,
-      .skills,
-      .teams,
-      .contact,
-      footer {
-        font-family: "Poppins", sans-serif;
-      }
-      /*navbar styling*/
+
+      /* Navbar */
       .navbar {
-        color: #ffffff;
         position: fixed;
         width: 100%;
         padding: 20px 120px;
-        font-family: "Poppins", sans-serif;
+        color: #fff;
+        background: transparent;
         transition: all 0.3s ease;
+        z-index: 999;
       }
+
       .navbar.sticky {
         background: #ccaa11;
         padding: 15px 120px;
-        color: rgb(255, 255, 255);
         transition: all 0.3s ease;
       }
 
       .navbar .max-width {
         display: flex;
-
         align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
       }
 
       .navbar .logo a {
-        color: #000000;
+        color: #000;
         font-size: 25px;
         font-weight: 500;
-        text-shadow: 0px 1px 5px rgb(0, 0, 0);
+        text-shadow: 0 1px 5px #000;
       }
+
       .navbar .logo a span {
         color: #3152ff;
-        text-shadow: 0px 1px 5px rgb(0, 0, 0);
       }
+
       .navbar.sticky .logo a {
-        color: rgb(230, 44, 44);
-        text-shadow: 0px 2px 5px rgb(0, 0, 0);
+        color: #e62c2c;
       }
+
       .navbar.sticky .logo a span {
-        color: rgb(0, 0, 0);
-        text-shadow: 0px 2px 5px rgb(0, 0, 0);
+        color: #000;
       }
+
       .navbar .menu {
+        display: flex;
+        flex-wrap: wrap;
         padding-left: 32%;
       }
+
       .navbar .menu li {
-        list-style-type: none;
+        list-style: none;
         display: inline-block;
+        margin: 0 10px;
       }
 
       .navbar .menu li a {
-        color: #000000;
+        color: #000;
         font-size: 15px;
         font-weight: 500;
-        margin-left: 28px;
         transition: color 0.3s ease;
       }
+
       .navbar .menu li a:hover {
         color: crimson;
       }
 
       .menu-btn {
-        color: rgb(219, 219, 219);
-        font-size: 23px;
+        color: #fff;
+        font-size: 25px;
         cursor: pointer;
         display: none;
       }
+
+      /* Home Section */
       .home {
-        position: inherit;
-        /* background-color: rgb(202, 202, 202); */
         width: 100%;
         background: url(images/grunge-paint-background.jpg) no-repeat;
         background-size: cover;
       }
+
       .home .home-content {
-        width: 100%;
-        height: 550px;
-        color: rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100vh;
+        color: #000;
       }
-      .home .home-content .column-left {
-        width: 45%;
-        float: left;
-        padding-left: 80px;
-        margin-top: 5%;
+
+      .home .column-left {
+        flex: 45%;
+        padding: 0 20px;
       }
-      .home .home-content .column-left .text1 {
-        text-shadow: 0px 11px 45px rgb(134, 134, 134);
+
+      .home .column-left .text1 {
         font-size: 18px;
         color: #ffad31;
         padding-bottom: 30px;
+        text-shadow: 0 11px 45px #aaa;
       }
-      .home .home-content .column-left .text2 {
+
+      .home .column-left .text2 {
         font-size: 35px;
         line-height: 60px;
         color: #4617ff;
-        text-shadow: 0px 11px 45px rgb(138, 138, 138);
       }
 
-      .home .home-content .column-left .text2 span {
+      .home .column-left .text2 span {
         color: #da0000;
       }
-      .home .home-content .column-left .text3 {
+
+      .home .column-left .text3 {
         font-size: 18px;
-        line-height: 25px;
-        margin: 20px 5px;
         color: #242333;
-        text-shadow: 0px 11px 45px rgb(138, 138, 138);
+        margin-top: 20px;
       }
 
-      .home .home-content .column-left .btn-group {
-        margin-top: 35px;
+      .home .btn-group {
+        margin-top: 30px;
       }
-      .home .home-content .column-left .btn-group a {
-        display: inline-block;
-        padding: 8px 45px;
-        border: 1px solid;
-        text-decoration: none;
-        color: #4617ff;
-        border-color: #4617ff;
+
+      .home .btn-group a {
+        padding: 10px 30px;
+        border: 1px solid #4617ff;
         border-radius: 10px;
-      }
-      .home .home-content .column-left .btn-group a.color1 {
-        background-color: #4617ff;
-        color: #ffffff;
-        margin-right: 25px;
-      }
-      .home .home-content .btn-group a:hover {
-        transform: rotate(0deg) skew(0deg) translate(0, -10px);
-
-        background: transparent;
+        margin-right: 10px;
         color: #4617ff;
+        text-decoration: none;
+      }
+
+      .home .btn-group a.color1 {
+        background-color: #4617ff;
+        color: white;
+      }
+
+      .home .btn-group a:hover {
+        transform: translateY(-8px);
         transition: 0.4s;
       }
-      .home .home-content .column-left .btn-group a.color1:hover {
-        transform: rotate(0deg) skew(0deg) translate(0, -10px);
 
-        color: rgb(255, 244, 255);
-        transition: 0.4s;
+      .home .column-right {
+        flex: 55%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
-      .home .home-content .column-right {
-        width: 55%;
-        line-height: 500px;
-        /*background-color: #272727;*/
-        float: right;
-      }
-
-      .home .home-content .column-right img {
+      .home .column-right img {
         height: 450px;
         width: 450px;
-        box-shadow: 15px 20px 20px 15px rgba(151, 151, 151, 0.1);
+        border-radius: 50%;
         object-fit: cover;
-        border-radius: 1000px;
-        align-items: center;
-        margin-left: 18%;
-        margin-top: 5%;
+        box-shadow: 15px 20px 20px 15px rgba(151, 151, 151, 0.1);
       }
 
+      /* About Section */
       .about {
-        height: 700px;
-        background: #ccc;
-        background-size: cover;
-        padding-left: 120px;
-        background-color: rgb(255, 255, 255);
-        font-family: "poppins", sans-serif;
+        background-color: #000;
       }
-      section .title {
+
+      .title {
         font-size: 35px;
         font-weight: 500;
         color: rgb(7, 77, 109);
         text-align: center;
         margin-bottom: 40px;
-        padding-bottom: 5px;
-        font-family: "poppins", sans-serif;
       }
-      section .title span {
+
+      .title span {
         font-size: 20px;
         font-weight: 500;
-        color: rgb(255, 255, 255);
+        color: white;
       }
-      .about {
-        background-color: #000000;
-      }
-      .about .about-content {
-        display: flex;
 
+      .about-content {
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
       }
-      .about .about-content .left {
-        width: 30%;
+
+      .about .left {
+        flex: 30%;
+        text-align: center;
       }
-      .about .about-content .left img {
+
+      .about .left img {
         height: 350px;
         width: 350px;
-        box-shadow: 20px 25px 20px 15px rgba(0, 0, 0, 0.1);
-        object-fit: cover;
         border-radius: 8px;
-      }
-      .about .about-content .right {
-        padding-right: 200px;
-        padding-left: 100px;
-
-        width: 70%;
-        font-family: "poppins", sans-serif;
+        object-fit: cover;
+        box-shadow: 20px 25px 20px 15px rgba(0, 0, 0, 0.1);
       }
 
-      .about .about-content .right .text {
+      .about .right {
+        flex: 65%;
+        padding: 0 30px;
+        color: #fff;
+      }
+
+      .about .right .text {
         font-size: 30px;
         font-weight: 500;
-        color: rgb(255, 255, 255);
-
         padding-bottom: 10px;
       }
-      .about .about-content .right .text span {
+
+      .about .right .text span {
         color: crimson;
       }
-      .about .about-content .right p {
+
+      .about .right p {
         text-align: justify;
-        color: rgb(255, 255, 255);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 991px) {
+        .navbar {
+          padding: 15px 30px;
+        }
+
+        .menu-btn {
+          display: block;
+        }
+
+        .navbar .menu {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: #000;
+          width: 100%;
+          text-align: center;
+        }
+
+        .navbar .menu.active {
+          display: flex;
+        }
+
+        .navbar .menu li {
+          margin: 15px 0;
+        }
+
+        .home .home-content {
+          flex-direction: column;
+          text-align: center;
+          padding-top: 80px;
+        }
+
+        .home .column-left,
+        .home .column-right {
+          width: 100%;
+        }
+
+        .home .column-right img {
+          width: 80%;
+          height: auto;
+          margin: 20px 0;
+        }
+
+        .about-content {
+          flex-direction: column;
+        }
+
+        .about .left,
+        .about .right {
+          width: 100%;
+          padding: 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .navbar .logo a {
+          font-size: 20px;
+        }
+
+        .home .column-left .text2 {
+          font-size: 28px;
+          line-height: 40px;
+        }
+
+        .home .btn-group a {
+          padding: 8px 20px;
+        }
       }
     </style>
+
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if (this.scrollY > 10) {
+            $(".navbar").addClass("sticky");
+          } else {
+            $(".navbar").removeClass("sticky");
+          }
+        });
+
+        $(".menu-btn").click(function () {
+          $(".navbar .menu").toggleClass("active");
+          $(".menu-btn i").toggleClass("fa-times");
+        });
+      });
+    </script>
   </head>
-  <body></body>
+
   <body>
+    <!-- Navbar -->
     <nav class="navbar">
       <div class="max-width">
         <div class="logo">
-          <a href="#">
-            <b>PortF</b><b><span>olio</span></b>
-          </a>
+          <a href="#"
+            ><b>PortF</b><b><span>olio</span></b></a
+          >
         </div>
         <ul class="menu">
           <li><a href="#about">About me</a></li>
-          <li><a href="#skills">skills</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#service">Service</a></li>
           <li><a href="#project">Project</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -327,19 +384,19 @@
         </div>
       </div>
     </nav>
-    <!--Landing Page -->
+
+    <!-- Home Section -->
     <section id="home" class="home">
       <div class="max-width">
         <div class="home-content">
           <div class="column-left">
             <div class="text1">Welcome to my site</div>
             <div class="text2">
-              <b>Hi ! I am Babeen<br />Graphics<span> Designer.</span></b>
+              <b>Hi! I am Babeen<br />Graphics <span>Designer</span>.</b>
             </div>
-
             <div class="text3">
-              I was Student of information System .Currently Stuyding at Apex
-              College. I belive that every thing Can be learn If we give 100%.
+              I am a student of Information System, currently studying at Apex
+              College. I believe that everything can be learned if we give 100%.
             </div>
             <div class="btn-group">
               <a href="#" class="color1">Hire me</a>
@@ -347,23 +404,27 @@
             </div>
           </div>
           <div class="column-right">
-            <img src="images/img2.JPG" />
+            <img src="images/img2.JPG" alt="Profile Picture" />
           </div>
         </div>
       </div>
     </section>
+
+    <!-- About Section -->
     <section id="about" class="about">
       <div class="max-width">
         <h2 class="title">About me <br /><span>Who am I?</span></h2>
         <div class="about-content">
-          <div class="column left">
-            <img src="images/img1.jpg" />
+          <div class="left">
+            <img src="images/img1.jpg" alt="About Me Image" />
           </div>
-          <div class="column right">
-            <div class="text">I'm Babeen Dangol.I'm a <span>Student</span></div>
+          <div class="right">
+            <div class="text">
+              I'm Babeen Dangol. I'm a <span>Student</span>
+            </div>
             <p>
-              Welcome to my Portfolio.My name is Babeen dangol,Currently
-              Studying at Apex College.I am a programmer,student and Gamer.
+              Welcome to my Portfolio. My name is Babeen Dangol, currently
+              studying at Apex College. I am a programmer, student, and gamer.
             </p>
           </div>
         </div>
