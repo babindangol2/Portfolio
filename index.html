@@ -1,13 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>My Portfolio</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/bd.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      section {
+        padding: 100px 0;
+      }
+
+      .max-width {
+        max-width: 1440px;
+        padding: 0 50px;
+        margin: auto;
+      }
+
+      /* Navbar */
+      .navbar {
+        position: fixed;
+        width: 100%;
+        padding: 20px 120px;
+        color: #fff;
+        background: transparent;
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
+
+      .navbar.sticky {
+        background: #ccaa11;
+        padding: 15px 120px;
+        transition: all 0.3s ease;
+      }
+
+      .navbar .max-width {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .navbar .logo a {
+        color: #000;
+        font-size: 25px;
+        font-weight: 500;
+        text-shadow: 0 1px 5px #000;
+      }
+
+      .navbar .logo a span {
+        color: #3152ff;
+      }
+
+      .navbar.sticky .logo a {
+        color: #e62c2c;
+      }
+
+      .navbar.sticky .logo a span {
+        color: #000;
+      }
+
+      .navbar .menu {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 32%;
+      }
+
+      .navbar .menu li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      .navbar .menu li a {
+        color: #000;
+        font-size: 15px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .navbar .menu li a:hover {
+        color: crimson;
+      }
+
+      .menu-btn {
+        color: #fff;
+        font-size: 25px;
+        cursor: pointer;
+        display: none;
+      }
+
+      /* Home Section */
+      .home {
+        width: 100%;
+        background: url(images/grunge-paint-background.jpg) no-repeat;
+        background-size: cover;
+      }
+
+      .home .home-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100vh;
+        color: #000;
+      }
+
+      .home .column-left {
+        flex: 45%;
+        padding: 0 20px;
+      }
+
+      .home .column-left .text1 {
+        font-size: 18px;
+        color: #ffad31;
+        padding-bottom: 30px;
+        text-shadow: 0 11px 45px #aaa;
+      }
+
+      .home .column-left .text2 {
+        font-size: 35px;
+        line-height: 60px;
+        color: #4617ff;
+      }
+
+      .home .column-left .text2 span {
+        color: #da0000;
+      }
+
+      .home .column-left .text3 {
+        font-size: 18px;
+        color: #242333;
+        margin-top: 20px;
+      }
+
+      .home .btn-group {
+        margin-top: 30px;
+      }
+
+      .home .btn-group a {
+        padding: 10px 30px;
+        border: 1px solid #4617ff;
+        border-radius: 10px;
+        margin-right: 10px;
+        color: #4617ff;
+        text-decoration: none;
+      }
+
+      .home .btn-group a.color1 {
+        background-color: #4617ff;
+        color: white;
+      }
+
+      .home .btn-group a:hover {
+        transform: translateY(-8px);
+        transition: 0.4s;
+      }
+
+      .home .column-right {
+        flex: 55%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .home .column-right img {
+        height: 450px;
+        width: 450px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 15px 20px 20px 15px rgba(151, 151, 151, 0.1);
+      }
+
+      /* About Section */
+      .about {
+        background-color: #000;
+      }
+
+      .title {
+        font-size: 35px;
+        font-weight: 500;
+        color: rgb(7, 77, 109);
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .title span {
+        font-size: 20px;
+        font-weight: 500;
+        color: white;
+      }
+
+      .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .about .left {
+        flex: 30%;
+        text-align: center;
+      }
+
+      .about .left img {
+        height: 350px;
+        width: 350px;
+        border-radius: 8px;
+        object-fit: cover;
+        box-shadow: 20px 25px 20px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .about .right {
+        flex: 65%;
+        padding: 0 30px;
+        color: #fff;
+      }
+
+      .about .right .text {
+        font-size: 30px;
+        font-weight: 500;
+        padding-bottom: 10px;
+      }
+
+      .about .right .text span {
+        color: crimson;
+      }
+
+      .about .right p {
+        text-align: justify;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 991px) {
+        .navbar {
+          padding: 15px 30px;
+        }
+
+        .menu-btn {
+          display: block;
+        }
+
+        .navbar .menu {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: #000;
+          width: 100%;
+          text-align: center;
+        }
+
+        .navbar .menu.active {
+          display: flex;
+        }
+
+        .navbar .menu li {
+          margin: 15px 0;
+        }
+
+        .home .home-content {
+          flex-direction: column;
+          text-align: center;
+          padding-top: 80px;
+        }
+
+        .home .column-left,
+        .home .column-right {
+          width: 100%;
+        }
+
+        .home .column-right img {
+          width: 80%;
+          height: auto;
+          margin: 20px 0;
+        }
+
+        .about-content {
+          flex-direction: column;
+        }
+
+        .about .left,
+        .about .right {
+          width: 100%;
+          padding: 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .navbar .logo a {
+          font-size: 20px;
+        }
+
+        .home .column-left .text2 {
+          font-size: 28px;
+          line-height: 40px;
+        }
+
+        .home .btn-group a {
+          padding: 8px 20px;
+        }
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if (this.scrollY > 10) {
+            $(".navbar").addClass("sticky");
+          } else {
+            $(".navbar").removeClass("sticky");
+          }
+        });
+
+        $(".menu-btn").click(function () {
+          $(".navbar .menu").toggleClass("active");
+          $(".menu-btn i").toggleClass("fa-times");
+        });
+      });
+    </script>
   </head>
+
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="max-width">
+        <div class="logo">
+          <a href="#"
+            ><b>PortF</b><b><span>olio</span></b></a
+          >
+        </div>
+        <ul class="menu">
+          <li><a href="#about">About me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="https://www.facebook.com/babin.dangol.33"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/babeen_dangol/?hl=en"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/babin-dangol-663773191/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </li>
+        </ul>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+      <div class="max-width">
+        <div class="home-content">
+          <div class="column-left">
+            <div class="text1">Welcome to my site</div>
+            <div class="text2">
+              <b>Hi! I am Babin Dangol<br />Flutter <span>Developer</span>.</b>
+            </div>
+            <div class="text3">
+              I am a student of Information System, currently studying at Apex
+              College. I believe that everything can be learned if we give 100%.
+            </div>
+            <div class="btn-group">
+              <a href="#" class="color1">Hire me</a>
+              <a href="#">See My Project</a>
+            </div>
+          </div>
+          <div class="column-right">
+            <img src="images/img2.JPG" alt="Profile Picture" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="max-width">
+        <h2 class="title">About me <br /><span>Who am I?</span></h2>
+        <div class="about-content">
+          <div class="left">
+            <img src="images/img1.jpg" alt="About Me Image" />
+          </div>
+          <div class="right">
+            <div class="text">
+              I'm Babeen Dangol. I'm a <span>Student</span>
+            </div>
+            <p>
+              Welcome to my Portfolio. My name is Babeen Dangol, currently
+              studying at Apex College. I am a programmer, student, and gamer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
