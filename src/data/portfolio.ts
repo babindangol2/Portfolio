@@ -9,7 +9,7 @@ import profileImage from '../assets/professional_image.png';
 export const portfolioData: PortfolioData = {
   hero: {
     name: 'Babin Dangol',
-    title: 'Flutter Developer & UI Engineer',
+    title: 'Flutter Developer',
     roles: ['Flutter Developer', 'UI Engineer', 'Mobile Architect'],
     description:
       'I craft beautiful, performant mobile experiences with Flutter and TypeScript. Passionate about pixel-perfect UI, smooth animations, and clean architecture.',
@@ -22,30 +22,30 @@ export const portfolioData: PortfolioData = {
     { id: 'about', label: 'About', href: '#about' },
     { id: 'blog', label: 'Blog', href: '#blog' },
     { id: 'projects', label: 'Projects', href: '#projects' },
-    { id: 'resume', label: 'Resume', href: '/resume.pdf', isExternal: true },
+    { id: 'resume', label: 'Resume', href: '#resume' },
   ],
 
   socials: [
     {
       platform: 'github',
-      url: 'https://github.com/alexchen',
+      url: 'https://github.com/babindangol2',
       ariaLabel: 'View GitHub profile',
     },
     {
-      platform: 'threads',
-      url: 'https://threads.net/@alexchen',
-      ariaLabel: 'Follow on Threads',
+      platform: 'linkedin',
+      url: 'https://www.linkedin.com/in/babin-dangol/',
+      ariaLabel: 'View LinkedIn profile',
     },
-    {
-      platform: 'dribbble',
-      url: 'https://dribbble.com/alexchen',
-      ariaLabel: 'View Dribbble portfolio',
-    },
-    {
-      platform: 'behance',
-      url: 'https://behance.net/alexchen',
-      ariaLabel: 'View Behance portfolio',
-    },
+    // {
+    //   platform: 'dribbble',
+    //   url: 'https://dribbble.com/alexchen',
+    //   ariaLabel: 'View Dribbble portfolio',
+    // },
+    // {
+    //   platform: 'behance',
+    //   url: 'https://behance.net/alexchen',
+    //   ariaLabel: 'View Behance portfolio',
+    // },
   ],
 
   projects: [
@@ -110,16 +110,16 @@ export const portfolioData: PortfolioData = {
   about: {
     headline: 'Building digital experiences that matter',
     paragraphs: [
-      "I'm a Flutter Developer and UI Engineer based in San Francisco, with 5+ years of experience crafting mobile and web applications.",
+      "I'm a Flutter Developer based in Nepal, with 2+ years of experience crafting mobile applications.",
       'My focus is on creating interfaces that are not just functional, but delightful. I believe great software should feel as good as it works.',
       'When I\'m not coding, you\'ll find me exploring design systems, contributing to open source, or experimenting with new animation techniques.',
     ],
     skills: [
       { name: 'Flutter', category: 'mobile', proficiency: 95 },
       { name: 'Dart', category: 'mobile', proficiency: 95 },
-      { name: 'TypeScript', category: 'frontend', proficiency: 90 },
-      { name: 'React', category: 'frontend', proficiency: 85 },
-      { name: 'Node.js', category: 'backend', proficiency: 80 },
+      // { name: 'TypeScript', category: 'frontend', proficiency: 90 },
+      // { name: 'React', category: 'frontend', proficiency: 85 },
+      // { name: 'Node.js', category: 'backend', proficiency: 80 },
       { name: 'Firebase', category: 'backend', proficiency: 88 },
       { name: 'Figma', category: 'design', proficiency: 85 },
       { name: 'Git', category: 'tools', proficiency: 90 },
