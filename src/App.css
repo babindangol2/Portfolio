@@ -3,7 +3,6 @@
   position: relative;
   min-height: 100vh;
 }
-
 /* Background Noise Texture */
 .background-noise {
   position: fixed;
@@ -56,14 +55,14 @@
 }
 
 .footer-copyright {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
   color: #6A6A6A;
   margin: 0;
 }
 
 .footer-note {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
   color: #4A4A4A;
   margin: 0;

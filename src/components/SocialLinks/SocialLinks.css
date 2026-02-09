@@ -46,7 +46,7 @@
 }
 
 .social-link-label {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
   font-weight: 500;
   white-space: nowrap;

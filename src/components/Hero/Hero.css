@@ -64,10 +64,10 @@
   border-radius: 50%;
   background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  font-family: 'Inter', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 72px;
   font-weight: 600;
-  color: #E6E6E6;
+  color: #FFFFFF;
   align-items: center;
   justify-content: center;
 }
@@ -82,12 +82,12 @@
 }
 
 .hero-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: clamp(40px, 5vw, 72px);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: #E6E6E6;
+  color: #1a1a1a;
   margin: 0 0 24px;
 }
 
@@ -111,33 +111,29 @@
 }
 
 .hero-greeting {
-  color: #E6E6E6;
+  color: #1a1a1a;
   margin-right: 10px;
 }
 
 .hero-name {
-  color: #E6E6E6;
-  background: linear-gradient(135deg, #E6E6E6 0%, #BDBDBD 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #1a1a1a;
 }
 
 .hero-comma {
-  color: #9A9A9A;
+  color: #1a1a1a  ;
 }
 
 .hero-role {
-  color: #BDBDBD;
+  color: #1a1a1a;
   font-weight: 500;
 }
 
 .hero-description {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: clamp(16px, 1.2vw, 18px);
   font-weight: 400;
   line-height: 1.7;
-  color: #9A9A9A;
+  color: #1a1a1a  ;
   max-width: 540px;
   margin: 0 0 40px;
   opacity: 0;
@@ -170,9 +166,9 @@
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50px;
-  color: #E6E6E6;
+  color: #FFFFFF;
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 15px;
   font-weight: 500;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

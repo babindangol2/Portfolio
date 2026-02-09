@@ -16,7 +16,12 @@ export function Hero({ content }: HeroProps) {
   }, []);
 
   return (
-    <section className="hero">
+    <section className="hero bg-[#F7F3EB]" >
+         {/* Dot pattern layer */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 dot-pattern opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
+      </div>
       <div className="hero-container">
         <div className={`hero-image-wrapper ${isLoaded ? 'loaded' : ''}`}>
           <div className="hero-image-glow" />
@@ -42,10 +47,7 @@ export function Hero({ content }: HeroProps) {
               Hi, I'm{' '}
             </span>
             <span className="hero-name" style={{ animationDelay: '0.2s' }}>
-              {content.name}
-            </span>
-            <span className="hero-comma" style={{ animationDelay: '0.3s' }}>
-              ,
+              {content.name},
             </span>
             <br />
             <span className="hero-role" style={{ animationDelay: '0.4s' }}>

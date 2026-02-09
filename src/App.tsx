@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="relative min-h-screen noise-bg dot-pattern">
+    <div className="relative min-h-screen noise-bg">
       {/* Navigation */}
       <Navigation items={portfolioData.navigation} />
       

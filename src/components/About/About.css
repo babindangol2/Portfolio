@@ -9,7 +9,7 @@
 }
 
 .about-headline {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 600;
   color: #E6E6E6;
@@ -38,7 +38,7 @@
 }
 
 .about-paragraph {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: clamp(16px, 1.2vw, 18px);
   font-weight: 400;
   line-height: 1.8;
@@ -63,7 +63,7 @@
 }
 
 .skills-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -85,7 +85,7 @@
 }
 
 .skill-category-label {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
@@ -106,7 +106,7 @@
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
   font-weight: 500;
   color: #BDBDBD;
