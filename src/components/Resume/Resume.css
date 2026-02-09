@@ -1,0 +1,218 @@
+.resume {
+  padding: 120px 60px;
+  position: relative;
+}
+
+.resume-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.resume-header {
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.resume-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.resume-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 500;
+  color: #E6E6E6;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.resume-subtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(16px, 1.2vw, 18px);
+  color: #9A9A9A;
+  margin: 0;
+}
+
+/* Content Layout */
+.resume-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* Section Titles */
+.resume-section-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6A6A6A;
+  margin: 0 0 40px;
+}
+
+/* Experience Timeline */
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.experience-item {
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.experience-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experience-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4A4A4A;
+  margin-top: 4px;
+}
+
+.experience-content {
+  flex: 1;
+}
+
+.experience-date {
+  display: block;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  color: #6A6A6A;
+  margin-bottom: 8px;
+}
+
+.experience-role {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #E6E6E6;
+  margin: 0 0 4px;
+}
+
+.experience-company {
+  display: block;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  color: #9A9A9A;
+  margin-bottom: 12px;
+}
+
+.experience-description {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #7A7A7A;
+  margin: 0;
+}
+
+/* Skills Section */
+.resume-skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-category {
+  margin-bottom: 32px;
+}
+
+.skills-category:last-child {
+  margin-bottom: 0;
+}
+
+.skills-category-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #5A5A5A;
+  margin: 0 0 16px;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #BDBDBD;
+  transition: all 0.3s ease;
+}
+
+.skill-pill:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #E6E6E6;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .resume {
+    padding: 100px 40px;
+  }
+
+  .resume-content {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume {
+    padding: 80px 24px;
+  }
+
+  .resume-header {
+    margin-bottom: 60px;
+  }
+
+  .resume-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .experience-timeline {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume {
+    padding: 60px 20px;
+  }
+
+  .experience-icon {
+    display: none;
+  }
+
+  .experience-item {
+    gap: 0;
+  }
+}

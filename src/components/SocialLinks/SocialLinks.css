@@ -1,0 +1,136 @@
+.social-links {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.social-links-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 8px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  color: #7A7A7A;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.social-link-label {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.social-link:hover {
+  color: #E6E6E6;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.social-link:hover svg {
+  transform: scale(1.1);
+}
+
+.social-link:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .social-links {
+    right: 24px;
+  }
+
+  .social-links-panel {
+    padding: 10px 6px;
+  }
+
+  .social-link {
+    padding: 8px 12px;
+  }
+
+  .social-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .social-link-label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    position: fixed;
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: 24px;
+    transform: translateX(-50%);
+  }
+
+  .social-links-panel {
+    flex-direction: row;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 50px;
+  }
+
+  .social-link {
+    padding: 10px;
+  }
+
+  .social-link-label {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links {
+    bottom: 16px;
+  }
+
+  .social-links-panel {
+    padding: 8px 12px;
+    gap: 4px;
+  }
+
+  .social-link {
+    padding: 8px;
+  }
+
+  .social-link svg {
+    width: 16px;
+    height: 16px;
+  }
+}

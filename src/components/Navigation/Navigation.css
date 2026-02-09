@@ -1,0 +1,87 @@
+.navigation {
+  position: fixed;
+  top: 24px;
+  right: 40px;
+  z-index: 1000;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease;
+}
+
+.navigation.hidden {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+.navigation.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.nav-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.navigation.scrolled .nav-pill {
+  background: rgba(17, 17, 17, 0.85);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item {
+  padding: 10px 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9A9A9A;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: color 0.2s ease,
+              background 0.2s ease,
+              transform 0.2s ease;
+}
+
+.nav-item:hover {
+  color: #E6E6E6;
+  background: rgba(255, 255, 255, 0.05);
+  transform: scale(1.02);
+}
+
+.nav-item.active {
+  color: #E6E6E6;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navigation {
+    top: 16px;
+    right: 16px;
+    left: 16px;
+  }
+
+  .nav-pill {
+    justify-content: center;
+    gap: 4px;
+    padding: 6px 8px;
+  }
+
+  .nav-item {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-item {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}

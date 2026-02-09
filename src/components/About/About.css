@@ -1,0 +1,157 @@
+.about {
+  padding: 120px 60px;
+  position: relative;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-headline {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600;
+  color: #E6E6E6;
+  line-height: 1.2;
+  margin: 0 0 48px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about-headline.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-content {
+  margin-bottom: 64px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
+}
+
+.about-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-paragraph {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(16px, 1.2vw, 18px);
+  font-weight: 400;
+  line-height: 1.8;
+  color: #9A9A9A;
+  margin: 0 0 24px;
+}
+
+.about-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills Section */
+.about-skills {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s;
+}
+
+.about-skills.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #BDBDBD;
+  margin: 0 0 32px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+}
+
+.skill-category {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-category-label {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6A6A6A;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #BDBDBD;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #E6E6E6;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about {
+    padding: 100px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 80px 24px;
+  }
+
+  .about-headline {
+    margin-bottom: 32px;
+  }
+
+  .about-content {
+    margin-bottom: 48px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 60px 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
