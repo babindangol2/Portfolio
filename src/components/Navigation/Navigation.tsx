@@ -9,7 +9,7 @@ interface NavigationProps {
 
 export function Navigation({ items }: NavigationProps) {
   const [activeItem, setActiveItem] = useState<string | null>(null);
-  const { isVisible, isAtTop } = useNavbarVisibility();
+  const { isAtTop } = useNavbarVisibility();
 
   const handleClick = (item: NavItem) => {
     setActiveItem(item.id);
