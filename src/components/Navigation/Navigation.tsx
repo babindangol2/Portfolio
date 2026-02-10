@@ -21,7 +21,7 @@ export function Navigation({ items }: NavigationProps) {
 
   return (
     <nav
-      className={`navigation ${isVisible ? 'visible' : 'hidden'} ${isAtTop ? 'at-top' : 'scrolled'}`}
+      className={`navigation ${isAtTop ? 'at-top' : 'scrolled'}`}
     >
       <div className="nav-pill">
         {items.map((item) => (

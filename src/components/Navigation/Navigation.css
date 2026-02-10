@@ -31,7 +31,7 @@
 }
 
 .navigation.scrolled .nav-pill {
-  background: rgba(17, 17, 17, 0.85);
+  /* background: rgba(17, 17, 17, 0.85); */
   border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -40,7 +40,7 @@
   font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
   font-weight: 500;
-  color: #9A9A9A;
+  color: #E6E6E6;
   text-decoration: none;
   border-radius: 30px;
   transition: color 0.2s ease,
