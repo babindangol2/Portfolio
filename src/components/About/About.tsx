@@ -28,7 +28,7 @@ export function About({ content }: AboutProps) {
   };
 
   return (
-    <section id="about" className="about">
+    <section id="about" className="about bg-[#333533]">
       <div className="about-container">
         <h2
           ref={headlineRef}

@@ -4,7 +4,7 @@
  */
 
 // Social link platform types
-export type SocialPlatform = 'github' | 'dribbble' | 'behance' | 'threads' | 'linkedin' | 'twitter';
+export type SocialPlatform = 'github' | 'dribbble' | 'behance' | 'threads' | 'linkedin' | 'twitter' | 'gmail';
 
 // Navigation item interface
 export interface NavItem {

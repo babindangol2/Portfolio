@@ -10,7 +10,10 @@ export function Projects({ projects }: ProjectsProps) {
   const [headerRef, headerState] = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section id="projects" className="projects">
+    <section id="projects" className="projects bg-[#EFE9E3]">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
+      </div>
       <div className="projects-container">
         <div
           ref={headerRef}

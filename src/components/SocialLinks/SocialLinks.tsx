@@ -40,6 +40,11 @@ const SocialIcon: React.FC<{ platform: SocialPlatform }> = ({ platform }) => {
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
       </svg>
     ),
+    gmail: (
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.447 4.5H3.553C2.68 4.5 2 5.18 2 6.053v11.894c0 .873.68 1.553 1.553 1.553h16.894c.873 0 1.553-.68 1.553-1.553V6.053c0-.873-.68-1.553-1.553-1.553zm0 2.306l-7.223 5.07a1.5 1.5 0 01-1.548 0L3.553 6.806V6.053l7.223 5.07a.5.5 0 00.548 0L20.447 6.053v.753z" />
+      </svg>
+    ),
   };
 
   return icons[platform] || null;
@@ -52,6 +57,7 @@ const platformLabels: Record<SocialPlatform, string> = {
   threads: 'Threads',
   linkedin: 'LinkedIn',
   twitter: 'Twitter',
+  gmail: 'Email',
 };
 
 export function SocialLinks({ links }: SocialLinksProps) {

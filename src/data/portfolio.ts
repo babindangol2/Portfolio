@@ -36,6 +36,11 @@ export const portfolioData: PortfolioData = {
       url: 'https://www.linkedin.com/in/babin-dangol/',
       ariaLabel: 'View LinkedIn profile',
     },
+    {
+      platform: 'gmail',
+      url: 'mailto:babindangol217s@gmail.com',
+      ariaLabel: 'Send email',
+    },
   ],
 
   projects: [

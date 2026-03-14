@@ -17,7 +17,7 @@ export function Resume({ experience }: ResumeProps) {
   };
 
   return (
-    <section id="resume" className="resume">
+    <section id="resume" className="resume ">
       <div className="resume-container">
         <div
           ref={headerRef}

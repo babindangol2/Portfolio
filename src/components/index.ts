@@ -4,3 +4,4 @@ export { SocialLinks } from './SocialLinks';
 export { About } from './About';
 export { Projects } from './Projects';
 export { Resume } from './Resume';
+export { SplashScreen } from './SplashScreen';

@@ -2,11 +2,11 @@
 
 @layer utilities {
   /* Noise Background */
-  .noise-bg {
+  /* .noise-bg {
     background: linear-gradient(180deg, #0B0B0C 0%, #111111 100%);
     position: relative;
-  }
-
+  } */
+/* 
   .noise-bg::before {
     content: '';
     position: fixed;
@@ -18,24 +18,8 @@
     opacity: 0.03;
     pointer-events: none;
     z-index: 1;
-  }
+  } */
 
-  /* Dot Pattern */
-  .dot-pattern::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px);
-    background-size: 20px 20px;
-    background-repeat: repeat;
-    pointer-events: none;
-    z-index: 2;
-  }
 }
 
 /* ===================================

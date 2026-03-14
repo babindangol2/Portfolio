@@ -1,10 +1,22 @@
-import { Navigation, Hero, SocialLinks, About, Projects, Resume } from './components';
+import { useState } from 'react';
+import { Navigation, Hero, SocialLinks, About, Projects, Resume, SplashScreen } from './components';
 import portfolioData from './data/portfolio';
 import './App.css';
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true);
+  const [showContent, setShowContent] = useState(false);
+
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+    setShowContent(true);
+  };
+
   return (
-    <div className="relative min-h-screen noise-bg">
+    <>
+      {showSplash && <SplashScreen onComplete={handleSplashComplete} />}
+      
+      <div className={`relative min-h-screen noise-bg ${showContent ? 'content-visible' : 'content-hidden'}`}>
       {/* Navigation */}
       <Navigation items={portfolioData.navigation} />
       
@@ -38,6 +50,7 @@ function App() {
         </footer>
       </main>
     </div>
+    </>
   );
 }
 

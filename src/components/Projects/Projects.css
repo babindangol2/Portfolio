@@ -25,14 +25,14 @@
   font-family: 'JetBrains Mono', monospace;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 600;
-  color: #E6E6E6;
-  margin: 0 0 16px;
+  color: #000000;
+  margin: 0px 0 16px;
 }
 
 .projects-subtitle {
   font-family: 'JetBrains Mono', monospace;
   font-size: clamp(16px, 1.2vw, 18px);
-  color: #9A9A9A;
+  color: #3B3030;
   margin: 0;
   max-width: 500px;
   margin: 0 auto;
@@ -48,9 +48,9 @@
 
 /* Project Card */
 .project-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid ;
+  border-radius: 30px;
   overflow: hidden;
   opacity: 0;
   transform: translateY(40px);
@@ -118,7 +118,7 @@
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   font-weight: 500;
-  color: #BDBDBD;
+  color: #3B3030;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -127,7 +127,7 @@
   font-family: 'JetBrains Mono', monospace;
   font-size: 24px;
   font-weight: 600;
-  color: #E6E6E6;
+  color: #3B3030;
   margin: 0 0 12px;
 }
 

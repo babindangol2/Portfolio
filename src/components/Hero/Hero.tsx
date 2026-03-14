@@ -16,12 +16,7 @@ export function Hero({ content }: HeroProps) {
   }, []);
 
   return (
-    <section className="hero bg-[#F7F3EB]" >
-         {/* Dot pattern layer */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 dot-pattern opacity-50" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
-      </div>
+    <section className="hero" >
       <div className="hero-container">
         <div className={`hero-image-wrapper ${isLoaded ? 'loaded' : ''}`}>
           <div className="hero-image-glow" />
