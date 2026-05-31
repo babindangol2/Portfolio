@@ -87,7 +87,7 @@
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: #1a1a1a;
+  color: #FFFFFF;
   margin: 0 0 24px;
 }
 
@@ -111,20 +111,20 @@
 }
 
 .hero-greeting {
-  color: #1a1a1a;
+  color: #FFFFFF;
   margin-right: 10px;
 }
 
 .hero-name {
-  color: #1a1a1a;
+  color: #FFFFFF;
 }
 
 .hero-comma {
-  color: #1a1a1a  ;
+  color: #FFFFFF;
 }
 
 .hero-role {
-  color: #1a1a1a;
+  color: #FFFFFF;
   font-weight: 500;
 }
 
@@ -133,7 +133,7 @@
   font-size: clamp(16px, 1.2vw, 18px);
   font-weight: 400;
   line-height: 1.7;
-  color: #1a1a1a  ;
+  color: #FFFFFF;
   max-width: 540px;
   margin: 0 0 40px;
   opacity: 0;

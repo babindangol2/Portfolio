@@ -37,9 +37,9 @@ export function SplashScreen({ onComplete }: SplashScreenProps) {
   return (
     <div className={`splash-screen ${isSliding ? 'slide-up' : ''}`}>
       <div className="splash-content">
-        <div className="splash-logo">
+        {/* <div className="splash-logo">
           <span className="splash-icon">⚡</span>
-        </div>
+        </div> */}
         
         <div className="splash-loader">
           <div className="splash-progress-bar">
@@ -52,7 +52,6 @@ export function SplashScreen({ onComplete }: SplashScreenProps) {
             {Math.round(progress)}%
           </div>
         </div>
-
         <p className="splash-text">Loading experience...</p>
       </div>
     </div>
