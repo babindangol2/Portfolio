@@ -37,7 +37,7 @@
 
 .nav-item {
   padding: 10px 20px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-primary);
   font-size: 14px;
   font-weight: 500;
   color: #E6E6E6;
@@ -49,14 +49,14 @@
 }
 
 .nav-item:hover {
-  color: #E6E6E6;
-  background: rgba(255, 255, 255, 0.05);
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.08);
   transform: scale(1.02);
 }
 
 .nav-item.active {
-  color: #E6E6E6;
-  background: rgba(255, 255, 255, 0.08);
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.12);
 }
 
 /* Mobile responsiveness */

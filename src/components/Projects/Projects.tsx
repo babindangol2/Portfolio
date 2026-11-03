@@ -8,25 +8,28 @@ interface ProjectsProps {
 
 export function Projects({ projects }: ProjectsProps) {
   const [headerRef, headerState] = useScrollAnimation({ threshold: 0.2 });
+  const featuredProjects = projects.filter((project) => project.featured);
 
   return (
-    <section id="projects" className="projects bg-[#EFE9E3]">
-        <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
-      </div>
+    <section id="projects" className="projects">
       <div className="projects-container">
         <div
           ref={headerRef}
           className={`projects-header ${headerState.isVisible ? 'visible' : ''}`}
         >
-          <h2 className="projects-title">Featured Work</h2>
-          <p className="projects-subtitle">
-            Selected projects showcasing my expertise in Flutter development and UI engineering
-          </p>
+          <div className="projects-heading">
+            <div>
+              <span className="projects-eyebrow">Portfolio &amp; production</span>
+              <h2 className="projects-title">Featured Mobile Projects</h2>
+            </div>
+            <p className="projects-subtitle">
+              Thoughtful Flutter apps built for real people, from polished interfaces to reliable production features.
+            </p>
+          </div>
         </div>
 
         <div className="projects-grid">
-          {projects.filter(p => p.featured).map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
@@ -66,57 +69,54 @@ function ProjectCard({ project, index }: ProjectCardProps) {
     <article
       ref={ref}
       className={`project-card ${state.isVisible ? 'visible' : ''}`}
+      data-project-index={index % 3}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      <div className="project-thumbnail">
-        <div className="project-thumbnail-placeholder">
-          <span>{project.title.charAt(0)}</span>
-        </div>
-        <div className="project-thumbnail-overlay" />
-      </div>
-      
       <div className="project-content">
         <div className="project-meta">
+          <span className="project-featured-badge">{project.tags[0] ?? 'Flutter app'}</span>
           <span className="project-year">{project.year}</span>
-          {project.featured && <span className="project-featured-badge">Featured</span>}
         </div>
-        
+
         <h3 className="project-title">{project.title}</h3>
         <p className="project-description">{project.description}</p>
-        
+
         <div className="project-tags">
           {project.tags.map((tag) => (
             <span key={tag} className="project-tag">{tag}</span>
           ))}
         </div>
-        
-        <div className="project-links">
-          {project.liveUrl && (
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
-              <span>View Live</span>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
-          )}
-          {project.sourceUrl && (
-            <a
-              href={project.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link secondary"
-            >
-              <span>Source</span>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
-          )}
+
+        <div className="project-card-footer">
+          <span className="project-status"><span /> Featured project</span>
+          <div className="project-links">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <span>View Live</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            )}
+            {project.sourceUrl && (
+              <a
+                href={project.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link secondary"
+              >
+                <span>Source</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </article>

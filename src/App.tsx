@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navigation, Hero, SocialLinks, About, Projects, Resume, SplashScreen } from './components';
+import { Navigation, Hero, SocialLinks, About, Projects, Resume, SplashScreen, CursorFollower, SmoothScroll } from './components';
 import portfolioData from './data/portfolio';
 import './App.css';
 
@@ -14,7 +14,9 @@ function App() {
 
   return (
     <>
-      {showSplash && <SplashScreen onComplete={handleSplashComplete} />}
+      <CursorFollower />
+      <SmoothScroll />
+      {showSplash && <SplashScreen name={portfolioData.hero.name} onComplete={handleSplashComplete} />}
       
       <div className={`relative min-h-screen noise-bg ${showContent ? 'content-visible' : 'content-hidden'}`}>
       {/* Navigation */}
@@ -26,7 +28,7 @@ function App() {
       {/* Main Content */}
       <main className="relative z-10">
         {/* Hero Section */}
-        <Hero content={portfolioData.hero} />
+        <Hero content={portfolioData.hero} projects={portfolioData.projects} />
         
         {/* About Section */}
         <About content={portfolioData.about} />

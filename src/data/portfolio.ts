@@ -10,9 +10,9 @@ export const portfolioData: PortfolioData = {
   hero: {
     name: 'Babin Dangol',
     title: 'Flutter Developer',
-    roles: ['Flutter Developer', 'UI Engineer', 'Mobile Architect'],
+    roles: ['Flutter Developer', 'Mobile Architect'],
     description:
-      'I craft beautiful, performant mobile experiences with Flutter and TypeScript. Passionate about pixel-perfect UI, smooth animations, and clean architecture.',
+      'I develop and maintain Android and iOS applications, from feature implementation and API integration to debugging and production improvements. My work focuses on solving technical problems, maintaining existing codebases, and improving application quality.',
     profileImage: profileImage,
     ctaText: 'Get in touch',
     ctaHref: 'mailto:babindangol217@gmail.com',
@@ -123,67 +123,35 @@ export const portfolioData: PortfolioData = {
 
   experience: [
     {
-      id: 'senior-flutter',
-      company: 'Nomad Studio',
-      role: 'Senior Flutter Developer',
-      startDate: '2023-01',
+      id: 'ayata',
+      company: 'Ayata',
+      role: 'Mid-level Flutter Developer',
+      startDate: '2024-01',
       current: true,
       description:
-        'Leading mobile development for fintech clients across Southeast Asia. Building production apps with clean architecture and CI/CD pipelines.',
+        'Developing Flutter applications including Zunun, Avyaas, DishHome, B&B PACS, iHRTrack, and Nepal Decor.',
       achievements: [
-        'Led development of 3 fintech applications',
-        'Established clean architecture standards',
-        'Implemented CI/CD pipelines for automated deployments',
+        'Built and maintained production Flutter applications across multiple products',
+        'Implemented BLoC state management and Hive local storage',
+        'Set up Firebase push notifications and CI/CD with GitHub Actions and Fastlane',
       ],
-      technologies: ['Flutter', 'Dart', 'Firebase', 'GraphQL'],
+      technologies: ['Flutter', 'Dart', 'BLoC', 'Hive', 'Firebase', 'GitHub Actions', 'Fastlane'],
     },
     {
-      id: 'freelance',
-      company: 'Self-employed',
-      role: 'Freelance Developer & Designer',
-      startDate: '2020-01',
-      endDate: '2023-01',
+      id: 'axios',
+      company: 'Axios',
+      role: 'Junior Flutter Developer',
+      startDate: '2022-07',
+      endDate: '2024-01',
       current: false,
       description:
-        'Delivered 15+ cross-platform apps for startups and agencies. Specialised in pixel-perfect UI and animation-rich experiences.',
+        'Spent approximately 1.5 years progressing from Intern to Junior Flutter Developer while contributing to Hissab Nivid and Bolpatra.',
       achievements: [
-        'Delivered 15+ cross-platform applications',
-        'Worked with clients across 8 countries',
-        'Specialized in animation-rich mobile experiences',
+        'Progressed from Intern to Junior Flutter Developer',
+        'Contributed to the Hissab Nivid and Bolpatra applications',
+        'Built Flutter features with BLoC, Hive, and Firebase',
       ],
-      technologies: ['Flutter', 'React', 'TypeScript', 'Figma'],
-    },
-    {
-      id: 'frontend-engineer',
-      company: 'PixelCraft Agency',
-      role: 'Frontend Engineer',
-      startDate: '2018-01',
-      endDate: '2020-01',
-      current: false,
-      description:
-        'Built responsive web apps with React and TypeScript. Collaborated closely with designers to ship polished, accessible interfaces.',
-      achievements: [
-        'Built 20+ responsive web applications',
-        'Improved accessibility scores by 40%',
-        'Collaborated with design team on component library',
-      ],
-      technologies: ['React', 'TypeScript', 'CSS', 'Accessibility'],
-    },
-    {
-      id: 'junior-dev',
-      company: 'CodeBase Inc.',
-      role: 'Junior Developer',
-      startDate: '2016-01',
-      endDate: '2018-01',
-      current: false,
-      description:
-        'Started career building internal tools and dashboards. Gained deep experience with JavaScript, REST APIs, and agile workflows.',
-      achievements: [
-        'Built internal dashboard tools',
-        'Learned agile development workflows',
-        'Contributed to 5 production projects',
-      ],
-      technologies: ['JavaScript', 'REST APIs', 'HTML/CSS', 'Git'],
+      technologies: ['Flutter', 'Dart', 'BLoC', 'Hive', 'Firebase'],
     },
   ],
 };

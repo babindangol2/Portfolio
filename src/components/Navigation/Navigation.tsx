@@ -13,10 +13,6 @@ export function Navigation({ items }: NavigationProps) {
 
   const handleClick = (item: NavItem) => {
     setActiveItem(item.id);
-    if (!item.isExternal) {
-      const element = document.querySelector(item.href);
-      element?.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   return (
@@ -31,12 +27,7 @@ export function Navigation({ items }: NavigationProps) {
             target={item.isExternal ? '_blank' : undefined}
             rel={item.isExternal ? 'noopener noreferrer' : undefined}
             className={`nav-item ${activeItem === item.id ? 'active' : ''}`}
-            onClick={(e) => {
-              if (!item.isExternal) {
-                e.preventDefault();
-                handleClick(item);
-              }
-            }}
+            onClick={() => handleClick(item)}
           >
             {item.label}
           </a>
